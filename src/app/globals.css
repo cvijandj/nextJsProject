@@ -33,7 +33,7 @@
     #00000010,
     #00000080
   );
-
+  --page-background: #2a2012;
   --callout-rgb: 238, 240, 241;
   --callout-border-rgb: 172, 175, 176;
   --card-rgb: 180, 185, 188;

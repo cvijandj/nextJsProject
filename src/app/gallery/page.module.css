@@ -1,0 +1,146 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0rem;
+    min-height: 100vh;
+    background-color: var(--page-background);
+}
+
+.main__picture {
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    height: 500px;
+    object-fit: fill;
+}
+
+.main__text__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+
+.main__text1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.main__text2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.divider {
+    position: absolute;
+    top: calc(-10px - 10rem);
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 10rem;
+    z-index: 1;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-align: center;
+    background-color: #D6AF7A;
+    box-shadow: inset 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.row {
+    z-index: 1;
+    position: relative;
+    margin: 20px 0 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4px;
+}
+
+.card__desc {
+    position: absolute;
+    bottom: 5%;
+    left: 2%;
+    color: white;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    max-width: 33.33%;
+    width: auto;
+    padding: 0 4px;
+}
+
+.column img {
+    box-shadow: 8px 0px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 8px;
+    border-radius: 3px;
+    vertical-align: middle;
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+}
+
+.card {
+    position: relative;
+
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+        .divider {
+            padding: 10px;
+            width: 80%;
+            font-size: 1rem;
+        }
+}
+@media screen and (max-width: 900px) {
+ 
+    .divider {
+       
+        font-size: 1.1rem;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+    .divider {
+        top: calc(-10px - 15rem);
+        height: 13rem;
+    }
+        .row {
+            margin-top: 15rem;
+        }
+}
+
+@media screen and (max-width: 400px) {
+.divider {
+
+        height: 17rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__picture {
+        height: 300px;
+    }
+}

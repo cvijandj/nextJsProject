@@ -16,7 +16,8 @@
   height: 100vh;
 }
 
-.main__container { position: relative;
+.main__container { 
+  position: relative;
   width: 100%;
   height: 500px;
   clip-path: polygon(0% 0%, 100% 0%, 100% 94.73%, 67.59% 100%, 34.75% 100%, 0% 94.23%);

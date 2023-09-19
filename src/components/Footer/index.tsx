@@ -26,6 +26,7 @@ export default function Footer() {
             target="_blank"
           >
             <Instagram />
+            {` `}
             Инстаграм
           </a>
           <a
@@ -33,6 +34,7 @@ export default function Footer() {
             target="_blank"
           >
             <MapPin />
+            {` `}
             Адреса: Дечка 65, Шимановци
           </a>
         </div>
@@ -45,6 +47,7 @@ export default function Footer() {
               height={60}
             />
           </a>
+          <h1>Атеље Симикић</h1>
         </div>
       </div>
       <div>

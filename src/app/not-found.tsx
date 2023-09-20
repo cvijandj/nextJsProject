@@ -12,8 +12,8 @@ export default function NotFound() {
         alignItems: "center",
       }}
     >
-      <h2>Not Found</h2>
-      <p>Could not find requested resource</p>
+      <h2>Страница не постоји!</h2>
+      <p>Нисмо могли пронаћи страницу коју сте тражили.</p>
       <Link
         style={{
           backgroundColor: "#554122",
@@ -24,7 +24,7 @@ export default function NotFound() {
         }}
         href="/"
       >
-        Return Home
+        Вратите се на почетну страну
       </Link>
     </div>
   );

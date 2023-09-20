@@ -56,14 +56,19 @@ export default function Home() {
         <div className={styles.partner__div}>
           <Image
             style={{ width: "100%", height: "auto", borderRadius: "10px" }}
-            src={require("@/images/teamWork.png")}
+            src={require("@/images/partnerDecijaSoba.jpg")}
             alt="Obrada drveta"
           />
           <div className={styles.partner__text}>
-            <h2>Мебле</h2>
+            <h2>
+              <a href="http://www.minidekor.co.rs/" target="_blank">
+                Мини Декор
+              </a>
+            </h2>
             <p>
-              Мебле је компанија која се бави производњом и продажом кухињских
-              елемената. Наша сарадња са њима је дугогодишња и успешна.
+              М-Декор је компанија која се бави производњом намештаја за дечије
+              собе, рођендаонице и вртиће од медијапана у свим бојама по мери и
+              жељи.
             </p>
           </div>
         </div>

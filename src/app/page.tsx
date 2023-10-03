@@ -87,7 +87,12 @@ export default function Home() {
         <a href="http://www.minidekor.co.rs/" target="_blank">
           <div className={styles.partner__div}>
             <Image
-              style={{ width: "auto", height: "auto", borderRadius: "10px" }}
+              style={{
+                width: "80%",
+                maxWidth: "300px",
+                height: "auto",
+                maxHeight: "300px",
+              }}
               src={require("@/images/partnerLogo.png")}
               alt="Obrada drveta"
             />

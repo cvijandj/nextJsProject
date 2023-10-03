@@ -1,5 +1,17 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import SimpleImageSlider from "@/components/SimpleImageSlider";
+
+const images = [
+  require("@/images/projekt1.png"),
+  require("@/images/projekt2.png"),
+  require("@/images/projekt3.png"),
+  require("@/images/projekt4.png"),
+  require("@/images/projekt5.png"),
+  require("@/images/projekt6.png"),
+  require("@/images/projekt7.png"),
+  require("@/images/projekt8.png"),
+];
 
 export default function Home() {
   return (
@@ -7,7 +19,7 @@ export default function Home() {
       <div className={styles.main__container}>
         <Image
           className={styles.main__picture}
-          src={require("@/images/woodworking.jpg")}
+          src={require("@/images/bacground.jpg")}
           alt="Obrada drveta rucno"
         />
         <div className={styles.main__text__container}>
@@ -26,52 +38,69 @@ export default function Home() {
         </div>
         <div className={styles.row__pic}>
           <Image
-            style={{ width: "100%", height: "auto", borderRadius: "10px" }}
-            src={require("@/images/company.jpg")}
+            style={{
+              width: "100%",
+              height: "auto",
+              maxHeight: "450px",
+              borderRadius: "10px",
+            }}
+            src={require("@/images/secondTable.jpg")}
             alt="Obrada drveta"
           />
         </div>
       </div>
       <div className={styles.divider} />
-      <div className={styles.row}>
-        <div className={styles.row__pic}>
-          <Image
-            style={{ width: "100%", height: "auto", borderRadius: "10px" }}
-            src={require("@/images/teamWork.png")}
-            alt="Obrada drveta"
-          />
-        </div>
-        <div className={styles.row__text}>
-          <h1>Наш тим!</h1>
-          Наш тим стручњака воли изазове и посвећен је пружању врхунског
-          квалитета и пажње према детаљима у сваком пројекту који преузмемо.
-          Својим креативним приступом и вештином рада с дрветом, радимо на
-          стварању комада који не само да ће задовољити ваше потребе, већ ће и
-          унети топлину и елеганцију у ваш простор.
+      <div
+        style={{
+          backgroundColor: "#eeeeee",
+          width: "100%",
+          height: "fit-content",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <div className={styles.row}>
+          <div className={styles.row__pic}>
+            <SimpleImageSlider images={images} />
+          </div>
+          <div className={styles.row__text}>
+            <h1>Наше услуге:</h1>
+            Наш тим стручњака воли изазове и посвећен је пружању врхунског
+            квалитета и пажње према детаљима. ми се бавимо: <br />
+            -Обрадом дрвета на ЦНЦ
+            <br />
+            -Израдом дубореза и рељефа
+            <br />
+            -Израдом ограда
+            <br />
+            -Израдом намештаја
+            <br />
+            -Израдом различитих облика по вашим жељама
+            <br />
+          </div>
         </div>
       </div>
       <div className={styles.divider} />
       <div className={styles.partner__cont}>
         <div className={styles.partner__circle}>Наш партнер!</div>
-        <div className={styles.partner__div}>
-          <Image
-            style={{ width: "100%", height: "auto", borderRadius: "10px" }}
-            src={require("@/images/partnerDecijaSoba.jpg")}
-            alt="Obrada drveta"
-          />
-          <div className={styles.partner__text}>
-            <h2>
-              <a href="http://www.minidekor.co.rs/" target="_blank">
-                Мини Декор
-              </a>
-            </h2>
-            <p>
-              М-Декор је компанија која се бави производњом намештаја за дечије
-              собе, рођендаонице и вртиће од медијапана у свим бојама по мери и
-              жељи.
-            </p>
+        <a href="http://www.minidekor.co.rs/" target="_blank">
+          <div className={styles.partner__div}>
+            <Image
+              style={{ width: "auto", height: "auto", borderRadius: "10px" }}
+              src={require("@/images/partnerLogo.png")}
+              alt="Obrada drveta"
+            />
+
+            <div className={styles.partner__text}>
+              <h2>
+                <a href="http://www.minidekor.co.rs/" target="_blank">
+                  Мини Декор
+                </a>
+              </h2>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     </main>
   );

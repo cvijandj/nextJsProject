@@ -43,7 +43,7 @@ export default function Page() {
       >
         <Image
           className={styles.main__picture}
-          src={require("@/images/teamWork.png")}
+          src={require("@/images/galleryBackground.jpg")}
           alt="Obrada drveta rucno"
         />
         <div className={styles.main__text__container}>
@@ -64,8 +64,10 @@ export default function Page() {
           <div key={i} className={styles.column}>
             <div className={styles.card}>
               <div className={styles.card__desc}>
-                <h3>{job.htext}</h3>
-                <p>{job.text}</p>
+                <div className={styles.card__desc__text}>
+                  <h3>{job.htext}</h3>
+                  <p>{job.text}</p>
+                </div>
               </div>
               <Image
                 src={require("../../images/" + job.image + ".png")}
